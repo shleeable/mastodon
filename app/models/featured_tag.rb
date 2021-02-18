@@ -13,8 +13,8 @@
 #
 
 class FeaturedTag < ApplicationRecord
-  belongs_to :account, inverse_of: :featured_tags, required: true
-  belongs_to :tag, inverse_of: :featured_tags, required: true
+  belongs_to :account, inverse_of: :featured_tags
+  belongs_to :tag, inverse_of: :featured_tags
 
   delegate :name, to: :tag, allow_nil: true
 
